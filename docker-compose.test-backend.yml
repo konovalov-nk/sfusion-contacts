@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+  backend-test:
+    build: ./backend/
+    command: /app/run_tests.sh
+    volumes:
+      - ./backend:/app
+    depends_on:
+      - backend
+    tty: true

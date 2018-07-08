@@ -1,4 +1,4 @@
-let module_exports = {}
+let moduleExports = {}
 
 // For HMR to work properly over local network (/etc/hosts).
 const devServer = {
@@ -7,7 +7,7 @@ const devServer = {
 }
 
 if (process.env.NODE_ENV !== 'production') {
-  module_exports.devServer = devServer
+  moduleExports.devServer = devServer
 }
 
-module.exports = module_exports
+module.exports = moduleExports

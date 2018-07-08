@@ -72,8 +72,9 @@ inotifywait -m -q -r -e $EVENTS --exclude $EXCLUDE --format '%w%f' $WATCHDIR | \
     if [ -z "$PID" ]; then
       ## Execute the following as background process.
       ## It runs the command once and repeats if we tell him so.
-	  ($COMMAND; while read -t1 -u3 LINE; do
+	  (clear; $COMMAND; while read -t1 -u3 LINE; do
 	    echo running >&4
+	    clear
 	    $COMMAND
 	  done)&
 
