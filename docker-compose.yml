@@ -1,0 +1,45 @@
+version: '2'
+
+services:
+  nginx-proxy:
+    image: jwilder/nginx-proxy
+    ports:
+      - "80:80"
+    volumes:
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+
+  db:
+    image: postgres
+
+  backend:
+    build: ./backend/
+    command: /app/start.sh
+    environment:
+      - VIRTUAL_HOST=${BACKEND_HOST}
+    volumes:
+      - ./backend:/app
+    depends_on:
+      - db
+
+  backend-test:
+    build: ./backend/
+    command: /app/run_tests.sh
+    volumes:
+      - ./backend:/app
+    depends_on:
+      - backend
+    tty: true
+
+  frontend:
+    build: ./frontend/
+    command: npm run serve
+    environment:
+      - PORT=8004
+      - NODE_ENV=${NODE_ENV}
+      - VIRTUAL_HOST=${FRONTEND_HOST}
+    volumes:
+      - ./frontend:/usr/app
+      - /usr/app/node_modules
+    depends_on:
+      - backend
+

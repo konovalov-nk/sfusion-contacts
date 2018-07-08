@@ -1,0 +1,10 @@
+# Development files
+node_modules
+
+# Build files
+/dist
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
