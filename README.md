@@ -101,3 +101,5 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 ### Acknowledgements
 
 * Thanks to [fago](https://github.com/fago) for his awesome `inotifywait` [script](https://gist.github.com/fago/9608238). It just works.
+* Database diagrams created with [QuickDBD](https://www.quickdatabasediagrams.com)
+ 
