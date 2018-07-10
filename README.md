@@ -37,7 +37,7 @@ Next thing you need is `/etc/hosts` and `.env.example`. Copy `.env.example` to `
 $ cp .env.example .env
 ```
 
-Then add `FRONTEND_HOST` and `BACKEND_HOST` values to your `/etc/hosts` file, example
+Then add `FRONTEND_HOST` and `BACKEND_HOST` values (from `.env` file) to your `/etc/hosts` file, example
 
 ```
 127.0.0.1  localhost contacts.local api.contacts.local
@@ -50,7 +50,7 @@ $ docker-machine ip dev
 192.168.99.104
 ```
 
-In that case you have to different record to the `/etc/hosts`
+In that case you have to add a different record to the `/etc/hosts`
 
 ```
 192.168.99.104  contacts.local api.contacts.local
