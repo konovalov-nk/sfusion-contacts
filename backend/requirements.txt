@@ -1,7 +1,9 @@
 django-cors-headers==2.2.0
+django-filter==1.1.0
 Django==2.0.7
 djangorestframework==3.8.2
 expects==0.8.0
 gunicorn==19.9.0
 mamba==0.9.3
+markdown==2.6.11
 psycopg2==2.7.5

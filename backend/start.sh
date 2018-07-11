@@ -19,5 +19,6 @@ until postgres_ready; do
 done
 
 python manage.py migrate
+python manage.py collectstatic --no-input
 
 gunicorn project.wsgi -b 0.0.0.0:8005 --reload

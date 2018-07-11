@@ -75,14 +75,25 @@ WSGI_APPLICATION = 'project.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
-DATABASES = {
+AVAILABLE_DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'postgres',
         'USER': 'postgres',
         'HOST': 'db',
         'PORT': 5432,
+    },
+    'sqlite': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'TEST_CHARSET': 'UTF8',
+        'NAME': ':memory:',
+        'TEST_NAME': ':memory:',
     }
+}
+
+database = os.environ.get('DJANGO_DATABASE_TEST', 'default')
+DATABASES = {
+    'default': AVAILABLE_DATABASES[database]
 }
 
 
@@ -120,6 +131,5 @@ USE_TZ = True
 
 
 # Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/2.0/howto/static-files/
-
+STATIC_ROOT = "/app/static"
 STATIC_URL = '/static/'
