@@ -19,7 +19,6 @@ class Command(BaseCommand):
     help = 'Runs Mamba tests'
 
     def handle(self, *args, **options):
-        self.stdout.write(settings.DATABASES['default']['ENGINE'])
         call_command('migrate', verbosity=0)
 
         arguments = Settings()

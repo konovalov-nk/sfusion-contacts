@@ -1,6 +1,6 @@
 ## Contact details
 
-A simple project for managing people's contact details using Vue.js (`vue-cli 3.0` scaffold), Django (REST API), PostgreSQL, Docker, `nginx-proxy`, TDD/BDD testing tools (`chai`, `mocha`, `mamba`, `expects`) and a few things from [12-factor](https://12factor.net/) (such as `.env` configuration files), see [Built with](#built-with).  
+A simple project for managing people's contact details using Vue.js (`vue-cli 3.0` scaffold), Django (REST API), PostgreSQL, Docker, `nginx-proxy`, TDD/BDD testing tools (`chai`, `mocha`, `mamba`, `expects`), a few things from [12-factor](https://12factor.net/) (such as `.env` configuration files). For a full list, see [Built with](#built-with).
 
 ### Getting Started
 
@@ -81,14 +81,20 @@ Make sure there is an output from them by changing files inside `./backend/spec`
 
 ### Built with
 
+* [axios](https://github.com/axios/axios) - Promise based HTTP client for the browser and `node`
 * [chai](https://github.com/chaijs/chai) - TDD/BDD assertion library for `node`
+* [chance](https://github.com/chancejs/chancejs) - Random generator helper for JavaScript
 * [django](https://www.djangoproject.com) - Backend framework
 * [djangorestframework](https://github.com/encode/django-rest-framework) - Django REST framework
 * [docker](https://www.docker.com) - Containerization
 * [expects](https://github.com/jaimegildesagredo/expects) - TDD/BDD assertion library for Python
+* [factory-girl](https://github.com/aexmachina/factory-girl) - A factory library for Node.js and the browser
+* [factory_boy](https://github.com/FactoryBoy/factory_boy) - A test fixtures replacement for Python
+* [faker](https://github.com/joke2k/faker/) - A Python package that generates fake data
 * [gunicorn](https://github.com/benoitc/gunicorn) - Python WSGI HTTP server
 * [mamba](https://github.com/nestorsalceda/mamba) - BDD-style test runner for Python
 * [mocha](https://github.com/mochajs/mocha) - Javascript test framework for `node` & the browser
+* [moxios](https://github.com/axios/moxios) - Mock `axios` requests for testing
 * [nginx-proxy](https://github.com/jwilder/nginx-proxy) - Automated `nginx` proxy for Docker containers
 * [nginx](https://github.com/nginx/nginx) - HTTP and reverse proxy server
 * [postgres](https://github.com/postgres/postgres) - PostgreSQL DBMS
