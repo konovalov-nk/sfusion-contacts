@@ -83,13 +83,13 @@ Make sure there is an output from them by changing files inside `./backend/spec`
 
 * [axios](https://github.com/axios/axios) - Promise based HTTP client for the browser and `node`
 * [chai](https://github.com/chaijs/chai) - TDD/BDD assertion library for `node`
-* [chance](https://github.com/chancejs/chancejs) - Random generator helper for JavaScript
 * [django](https://www.djangoproject.com) - Backend framework
 * [djangorestframework](https://github.com/encode/django-rest-framework) - Django REST framework
 * [docker](https://www.docker.com) - Containerization
 * [expects](https://github.com/jaimegildesagredo/expects) - TDD/BDD assertion library for Python
 * [factory-girl](https://github.com/aexmachina/factory-girl) - A factory library for Node.js and the browser
 * [factory_boy](https://github.com/FactoryBoy/factory_boy) - A test fixtures replacement for Python
+* [faker.js](https://github.com/Marak/Faker.js) - Generate massive amounts of fake data in the browser and `node`
 * [faker](https://github.com/joke2k/faker/) - A Python package that generates fake data
 * [gunicorn](https://github.com/benoitc/gunicorn) - Python WSGI HTTP server
 * [mamba](https://github.com/nestorsalceda/mamba) - BDD-style test runner for Python
@@ -108,4 +108,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 * Thanks to [fago](https://github.com/fago) for his awesome `inotifywait` [script](https://gist.github.com/fago/9608238). It just works.
 * Database diagrams created with [QuickDBD](https://www.quickdatabasediagrams.com)
- 
+* BPMN diagram created with [BPMN Viewer and Editor](https://bpmn.io/)

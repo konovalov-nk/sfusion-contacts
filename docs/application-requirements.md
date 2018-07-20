@@ -107,7 +107,7 @@ The approach for writing tests is very simple:
 2. Add minimal amount of code to make it green
 3. Refactor
 
-In this application, I would be using Mamba together with Expects assertion library for testing Django. Vue.js have Mocha and Chai by default. For fixtures I would like to use more dynamic Factory approach using [factory_boy](https://github.com/FactoryBoy/factory_boy) package together with [faker](https://github.com/joke2k/faker/). For frontend side I'll be using [factory-girl](https://github.com/aexmachina/factory-girl) since it is the only thing I've found close enough to `factory_boy` package. It uses [chance](https://github.com/chancejs/chancejs) instead of the `faker`. 
+In this application, I would be using Mamba together with Expects assertion library for testing Django. Vue.js have Mocha and Chai by default. For fixtures I would like to use more dynamic Factory approach using [factory_boy](https://github.com/FactoryBoy/factory_boy) package together with [faker](https://github.com/joke2k/faker/). For frontend side I'll be using [factory-girl](https://github.com/aexmachina/factory-girl) since it is the only thing I've found close enough to `factory_boy` package. Fortunately, there is a Javascript version of `faker`: [faker.js](https://github.com/Marak/Faker.js). 
 
 **Result:** Mamba/Expects for Django, Mocha/Chai for Vue.js.
 
