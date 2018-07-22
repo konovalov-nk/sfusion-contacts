@@ -85,7 +85,7 @@ At this moment we have at least two solutions for fast and reliable provisioning
 
 #### Separating backend and frontend services
 
-Luckily, we don't need to have signup or login features for our application. That would complicate architecture a bit - storing JWT and/or session id data inside Cookies/Local Storage, etc.
+Luckily, we don't need to have signup or login features for our application. Otherwise, that could have complicated architecture a bit - storing JWT and/or session id data inside Cookies/Local Storage, etc.
 
 However, I believe that we have already entered an age where front-end applications considered as separate services from backends they rely on. In that case, we can use CDNs to cache/serve all of our client-side code and not worry about stale/cached data from our backend services. It also improves security since we don't have to route unencrypted traffic from backend to CDN gateways. For example, CloudFlare have to decrypt any SSL traffic that comes from backend (if you would like to use HTTP/2 features), so it could become rather vulnerable point. Having frontend separated from the backend guarantees we would not leak any sensitive data through CDN providers while taking advantages of their features.
 
