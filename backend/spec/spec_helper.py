@@ -5,4 +5,3 @@
 def configure(mamba_settings):
     # Do nothing
     return
-

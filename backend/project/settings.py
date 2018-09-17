@@ -25,7 +25,8 @@ SECRET_KEY = '49+@m%-1z1ob^jda_)*hmm83)_g0g^4e=mo+#osmh@2q+*xb*s'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['api.contacts.local']
+ALLOWED_HOSTS = ['api.contacts.local', 'testserver']
+APPEND_SLASH = False
 
 
 # Application definition
@@ -38,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'contacts',
-    'rest_framework'
+    'rest_framework',
+    'phonenumber_field'
 ]
 
 MIDDLEWARE = [
@@ -71,6 +73,14 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'project.wsgi.application'
 
+# Django REST framework
+
+REST_FRAMEWORK = {
+    'TEST_REQUEST_DEFAULT_FORMAT': 'json',
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
+    'PAGE_SIZE': 10,
+    'EXCEPTION_HANDLER': 'contacts.common.api_exception.api_exception'
+}
 
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
@@ -129,6 +139,7 @@ USE_L10N = True
 
 USE_TZ = True
 
+PHONENUMBER_DB_FORMAT = 'E164'
 
 # Static files (CSS, JavaScript, Images)
 STATIC_ROOT = "/app/static"

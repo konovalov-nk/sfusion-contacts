@@ -17,8 +17,11 @@ from django.conf.urls import url, include
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.conf import settings
 from rest_framework import routers
+from contacts import views
 
-router = routers.DefaultRouter()
+router = routers.DefaultRouter(trailing_slash=False)
+router.register(r'users', views.UsersViewSet)
+# router.register(r'users/{pk}', views.ListUsers)
 
 urlpatterns = [
     url(r'^', include(router.urls)),

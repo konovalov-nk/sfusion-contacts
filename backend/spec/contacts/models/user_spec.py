@@ -1,22 +1,12 @@
 from mamba import description, context, it, before, \
     fdescription, fcontext, fit
-from expects import expect, raise_error, have_key
 from spec.contacts.factories.user import UserFactory
-from django.core.validators import ValidationError
-
-
-def validate_field(user, field_name):
-    """
-    Raises Validation error for provided field name.
-
-    :param UserFactory user:
-    :param String field_name:
-    :return:
-    """
-    expect(lambda: user.clean_fields()).to(raise_error(ValidationError, have_key(field_name)))
-
+from spec.common.utils import clean_database, validate_field
 
 with description('User'):
+    with before.each:
+        clean_database()
+
     with context('when creating') as self:
         with before.each:
             self.user = UserFactory()
